@@ -9,7 +9,7 @@ namespace PhotoGalleryNgCoreApi.Entities
     {
         public User()
         {
-            UserRoles = new List<UserRole>()
+            UserRoles = new List<UserRole>();
         }
         public int Id { get; set; }
         public string Username { get; set; }

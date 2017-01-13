@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace PhotoGalleryNgCoreApi.Entities
 {
-    public class IEntityBase
+    public interface IEntityBase
     {
         int Id { get; set; }
     }
