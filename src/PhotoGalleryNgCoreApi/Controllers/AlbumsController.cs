@@ -93,8 +93,32 @@ namespace PhotoGalleryNgCoreApi.Controllers
                 List<Photo> _photos = null;
                 int _totalPhotos = new int();
 
+                Album _album = _albumRepository.GetSingle(a => a.Id == id, a => a.Photos);
 
+                _photos = _album.Photos.OrderBy(p => p.Id)
+                                        .Skip(currentPage * currentPageSize)
+                                        .Take(currentPageSize)
+                                        .ToList();
+
+                _totalPhotos = _album.Photos.Count();
+
+                IEnumerable<PhotoViewModel> _photosVM = Mapper.Map<IEnumerable<Photo>, IEnumerable<PhotoViewModel>>(_photos);
+
+                pagedSet = new PaginationSet<PhotoViewModel>()
+                {
+                    Page = currentPage,
+                    TotalCount = _totalPhotos,
+                    TotalPages = (int)Math.Ceiling((decimal)_totalPhotos / currentPage),
+                    Items = _photosVM
+                };
             }
+            catch (Exception ex)
+            {
+                _loggingRepository.Add(new Entities.Error() { Message = ex.Message, StackTrace = ex.StackTrace, DateCreated = DateTime.Now });
+                _loggingRepository.Commit();
+            }
+
+            return pagedSet;
         }
     }
 }
