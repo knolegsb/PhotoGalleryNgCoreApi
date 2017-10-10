@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
-using PhotoGalleryNgCoreApi.Infrastructure.Repositories.Abstract;
+using PhotoGalleryNgCoreApi.Infrastructure.Repositories;
 using PhotoGalleryNgCoreApi.Infrastructure.Core;
 using PhotoGalleryNgCoreApi.ViewModels;
 using PhotoGalleryNgCoreApi.Entities;

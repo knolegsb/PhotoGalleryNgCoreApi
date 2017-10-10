@@ -7,6 +7,7 @@ import { Headers, RequestOptions, BaseRequestOptions } from '@angular/http';
 
 //import { AccountModule } from './components/account/account.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home.component';
 
 @NgModule({
     imports: [
@@ -14,7 +15,7 @@ import { AppComponent } from './app.component';
         FormsModule,
         HttpModule
     ],
-    declarations: [AppComponent],
+    declarations: [AppComponent, HomeComponent],
     bootstrap: [AppComponent]
 })
 

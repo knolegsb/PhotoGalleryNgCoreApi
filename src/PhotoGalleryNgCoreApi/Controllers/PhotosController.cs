@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using PhotoGalleryNgCoreApi.Infrastructure.Repositories.Abstract;
 using PhotoGalleryNgCoreApi.Infrastructure.Repositories;
 using PhotoGalleryNgCoreApi.Infrastructure.Core;
 using PhotoGalleryNgCoreApi.ViewModels;
@@ -18,8 +17,13 @@ namespace PhotoGalleryNgCoreApi.Controllers
     public class PhotosController : Controller
     {
         IPhotoRepository _photoRepository;
-        LoggingRepository _loggingRepository;
-        
+        ILoggingRepository _loggingRepository;
+
+        public PhotosController(IPhotoRepository photoRepository, ILoggingRepository loggingRepository)
+        {
+            _photoRepository = photoRepository;
+            _loggingRepository = loggingRepository;
+        }
 
         [HttpGet("{page:int=0}/{pageSize=12}")]
         public PaginationSet<PhotoViewModel> Get(int? page, int? pageSize)
@@ -48,7 +52,7 @@ namespace PhotoGalleryNgCoreApi.Controllers
                 {
                     Page = currentPage,
                     TotalCount = _totalPhotos,
-                    TotalPages = (int)Math.Ceiling((decimal)_totalPhotos / currentPage),
+                    TotalPages = (int)Math.Ceiling((decimal)_totalPhotos / currentPageSize),
                     Items = _photosVM
                 };
             }

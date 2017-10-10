@@ -1,4 +1,4 @@
-﻿using PhotoGalleryNgCoreApi.Infrastructure.Services.Abstract;
+﻿using PhotoGalleryNgCoreApi.Infrastructure.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;

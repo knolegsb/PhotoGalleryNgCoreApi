@@ -1,6 +1,6 @@
 ﻿using PhotoGalleryNgCoreApi.Infrastructure.Core;
-using PhotoGalleryNgCoreApi.Infrastructure.Repositories.Abstract;
-using PhotoGalleryNgCoreApi.Infrastructure.Services.Abstract;
+using PhotoGalleryNgCoreApi.Infrastructure.Repositories;
+using PhotoGalleryNgCoreApi.Infrastructure.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;

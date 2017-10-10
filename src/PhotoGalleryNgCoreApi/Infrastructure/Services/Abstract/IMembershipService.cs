@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PhotoGalleryNgCoreApi.Infrastructure.Services.Abstract
+namespace PhotoGalleryNgCoreApi.Infrastructure.Services
 {
     public interface IMembershipService
     {

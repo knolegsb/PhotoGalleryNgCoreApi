@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PhotoGalleryNgCoreApi.Infrastructure.Repositories.Abstract
+namespace PhotoGalleryNgCoreApi.Infrastructure.Repositories
 {
     public interface IAlbumRepository : IEntityBaseRepository<Album> { }
     public interface ILoggingRepository : IEntityBaseRepository<Error> { }

@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using PhotoGalleryNgCoreApi.Entities;
-using PhotoGalleryNgCoreApi.Infrastructure.Repositories.Abstract;
+using PhotoGalleryNgCoreApi.Infrastructure.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;

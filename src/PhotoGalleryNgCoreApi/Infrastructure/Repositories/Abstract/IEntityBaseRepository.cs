@@ -5,7 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace PhotoGalleryNgCoreApi.Infrastructure.Repositories.Abstract
+namespace PhotoGalleryNgCoreApi.Infrastructure.Repositories
 {
     public interface IEntityBaseRepository<T> where T : class, IEntityBase, new()
     {
