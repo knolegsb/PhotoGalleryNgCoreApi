@@ -1,4 +1,4 @@
-System.register(['@angular/core', '@angular/platform-browser', '@angular/http', '@angular/forms', './app.component', './components/home.component'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/platform-browser', '@angular/http', '@angular/forms', './app.component', './components/home.component', './routes'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/http', 
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, platform_browser_1, http_1, forms_1, app_component_1, home_component_1;
+    var core_1, platform_browser_1, http_1, forms_1, app_component_1, home_component_1, routes_1;
     var AppModule;
     return {
         setters:[
@@ -31,6 +31,9 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/http', 
             },
             function (home_component_1_1) {
                 home_component_1 = home_component_1_1;
+            },
+            function (routes_1_1) {
+                routes_1 = routes_1_1;
             }],
         execute: function() {
             AppModule = class AppModule {
@@ -40,7 +43,8 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/http', 
                     imports: [
                         platform_browser_1.BrowserModule,
                         forms_1.FormsModule,
-                        http_1.HttpModule
+                        http_1.HttpModule,
+                        routes_1.routing
                     ],
                     declarations: [app_component_1.AppComponent, home_component_1.HomeComponent],
                     bootstrap: [app_component_1.AppComponent]

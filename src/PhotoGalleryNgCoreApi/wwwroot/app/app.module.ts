@@ -8,14 +8,20 @@ import { Headers, RequestOptions, BaseRequestOptions } from '@angular/http';
 //import { AccountModule } from './components/account/account.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home.component';
+import { AlbumPhotosComponent } from './components/album-photos.component';
+import { AlbumsComponent } from './components/albums.component';
+import { PhotosComponent } from './components/photos.component';
+
+import { routing } from './routes';
 
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
-        HttpModule
+        HttpModule,
+        routing
     ],
-    declarations: [AppComponent, HomeComponent],
+    declarations: [AppComponent, HomeComponent, AlbumPhotosComponent, PhotosComponent, AlbumsComponent],
     bootstrap: [AppComponent]
 })
 
