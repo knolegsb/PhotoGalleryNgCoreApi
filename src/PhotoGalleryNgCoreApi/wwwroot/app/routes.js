@@ -28,15 +28,15 @@ System.register(['@angular/router', './components/home.component', './components
                     pathMatch: 'full'
                 },
                 {
-                    path: 'home',
+                    path: '/home',
                     component: home_component_1.HomeComponent
                 },
                 {
-                    path: 'photos',
+                    path: '/photos',
                     component: photos_component_1.PhotosComponent
                 },
                 {
-                    path: 'albums',
+                    path: '/albums',
                     component: albums_component_1.AlbumsComponent
                 },
                 {
