@@ -1,1 +1,26 @@
 ﻿<h1>Album Photos works!</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                {{_albumTitle}}
+                <small>Page {{_page + 1}} of {{_pagesCount}}</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li>
+                    <a [routerLink]="['/Home']">Home</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/Albums']">Albums</a>
+                </li>
+                <li>{{_albumTitle}}</li>
+                <li class="active">Photos</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="row text-center">
+
+    </div>
+</div>
