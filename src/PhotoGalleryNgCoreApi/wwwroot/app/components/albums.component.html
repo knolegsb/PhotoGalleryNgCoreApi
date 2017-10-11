@@ -45,7 +45,7 @@
     <div class="text-center">
         <div ng-hide="(!_pagesCount || _pagesCount < 2)" style="display:inline">
             <ul class="pagination pagination-sm">
-                <li><a *ngif="_page != 0_" (click)="search(0)"><<</a></li>
+                <li><a *ngIf="_page != 0_" (click)="search(0)"><<</a></li>
                 <li><a *ngIf="_page != 0" (click)="search(_page-1)"><</a></li>
                 <li *ngFor="let n of range()" [ngClass]="{active: n == _page}">
                     <a (click)="search(n)" *ngIf="n != _page">{{n+1}}</a>
